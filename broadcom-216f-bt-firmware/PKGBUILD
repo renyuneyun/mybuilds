@@ -1,0 +1,25 @@
+# Maintainer: renyuneyun <renyuneyun@gmail.com>
+
+pkgname=broadcom-216f-bt-firmware
+pkgver=1.0.0
+pkgrel=1
+pkgdesc="Firmware for the broadcom 216F bluetooth adapter, on the BCM4352 wireless adapter"
+arch=('any')
+url="https://wiki.archlinux.org/index.php/Dell_XPS_13_%282015%29#Bluetooth"
+source=('http://download.windowsupdate.com/d/msdownload/update/driver/drvs/2014/07/20662520_6c535fbfa9dca0d07ab069e8918896086e2af0a7.cab')
+sha512sums=('e4597728adf18f0cca90bd73558dbcea9f7e9d9128f7db320bc40529e895b585d37d499e56c2d502408a7ff0e88769ab5ba3cedd1a33881970af3843683f8f22')
+license=('custom')
+depends=()
+makedepends=('cabextract' 'bluez-utils')
+optdepends=()
+options=()
+
+package() {
+	cd ${srcdir}
+	cabextract 20662520_6c535fbfa9dca0d07ab069e8918896086e2af0a7.cab
+	hex2hcd BCM20702A1_001.002.014.1443.1572.hex
+	mkdir -p ${pkgdir}/usr/lib/firmware/brcm
+	cd ${pkgdir}/usr/lib/firmware/brcm
+	mv ${srcdir}/BCM20702A1_001.002.014.1443.1572.hcd BCM20702A1-0a5c-216f.hcd
+	ln -rs BCM20702A1-0a5c-216f.hcd BCM20702A0-0a5c-216f.hcd
+}

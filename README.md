@@ -19,3 +19,7 @@
 * maya2015
   * from AUR3
   * not exist on AUR4
+
+* broadcom-216f-bt-firmware
+  * wrote by myself
+  * reference: https://wiki.archlinux.org/index.php/Dell_XPS_13_%282015%29#Bluetooth
