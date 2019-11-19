@@ -31,3 +31,6 @@ Some of them are on AUR, some are not (or no longer).
 * pacman-pstatus
   * wrote by myself
 
+* projfs
+  * wrote by myself
+

@@ -2,3 +2,7 @@
 	path = pacman-pstatus
 	url = https://gitlab.com/renyuneyun/pacman-ps.git
 	branch = aur
+[submodule "projfs"]
+	path = projfs
+	url = https://github.com/renyuneyun/projfs.git
+	branch = aur
