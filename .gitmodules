@@ -1,0 +1,4 @@
+[submodule "pacman-pstatus"]
+	path = pacman-pstatus
+	url = https://gitlab.com/renyuneyun/pacman-ps.git
+	branch = aur

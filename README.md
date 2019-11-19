@@ -27,3 +27,7 @@ Some of them are on AUR, some are not (or no longer).
 * broadcom-216f-bt-firmware
   * wrote by myself
   * reference: https://wiki.archlinux.org/index.php/Dell_XPS_13_%282015%29#Bluetooth
+
+* pacman-pstatus
+  * wrote by myself
+
