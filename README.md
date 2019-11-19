@@ -1,5 +1,9 @@
- ## Here are build scripts written or modified by me on AUR ##
+## My build scripts ##
   - - -
+
+These are the archlinux package build scripts (mainly `PKGBUILD`) written or modified by me.
+Some of them are on AUR, some are not (or no longer).
+
 * libtiff3
   * from AUR
   * modified
