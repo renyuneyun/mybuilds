@@ -1,7 +1,9 @@
-*.pkg.tar.xz
+*.pkg.tar*
 *.xz
 *.tar
 *.gz
 *.zip
 *.rar
 *.cab
+src/
+pkg/

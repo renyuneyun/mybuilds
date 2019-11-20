@@ -34,3 +34,6 @@ Some of them are on AUR, some are not (or no longer).
 * projfs
   * wrote by myself
 
+* flipper
+  * wrote by myself
+
