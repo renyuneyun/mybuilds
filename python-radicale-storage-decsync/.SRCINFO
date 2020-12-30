@@ -1,0 +1,17 @@
+pkgbase = python-radicale-storage-decsync
+	pkgdesc = DecSync storage plugin for Radicale
+	pkgver = 1.2.0
+	pkgrel = 1
+	url = https://github.com/39aldo39/Radicale-DecSync
+	arch = any
+	license = GPL3
+	makedepends = python-setuptools
+	depends = python-geoip
+	depends = python-twisted
+	depends = radicale
+	depends = python-libdecsync
+	source = Radicale-DecSync-1.2.0.tar.gz::https://github.com/39aldo39/Radicale-DecSync/archive/v1.2.0.tar.gz
+	sha512sums = cc319a2bc0c6a9b200d84cd7b6275e5dbc1036d896ed9af755ffa853ee64e8dc48b922cd9a5392fbbd57aa8060c791951cb97e5b8860af52852e0291517f2d8a
+
+pkgname = python-radicale-storage-decsync
+

@@ -1,0 +1,26 @@
+# maintainer renyuneyun <renyuneyun@gmail.com>
+
+pkgname=python-radicale-storage-decsync
+_pkgname=Radicale-DecSync
+pkgver=1.2.0
+pkgrel=1
+pkgdesc='DecSync storage plugin for Radicale'
+arch=('any')
+url='https://github.com/39aldo39/Radicale-DecSync'
+license=('GPL3')
+depends=('python-geoip' 'python-twisted' 'radicale' 'python-libdecsync')
+makedepends=('python-setuptools')
+source=("${_pkgname}-${pkgver}.tar.gz::https://github.com/39aldo39/$_pkgname/archive/v$pkgver.tar.gz")
+sha512sums=('cc319a2bc0c6a9b200d84cd7b6275e5dbc1036d896ed9af755ffa853ee64e8dc48b922cd9a5392fbbd57aa8060c791951cb97e5b8860af52852e0291517f2d8a')
+
+build() {
+  cd "$srcdir"/${_pkgname}-${pkgver}
+  python setup.py build
+}
+ 
+package() {
+  cd "$srcdir/$_pkgname-$pkgver"
+  python setup.py install --root="$pkgdir/" --optimize=1
+}
+
+# vim:set ts=2 sw=2 et:
