@@ -1,0 +1,27 @@
+# maintainer renyuneyun <renyuneyun@gmail.com>
+
+pkgname=python-libdecsync
+_pkgname=libdecsync-bindings-python3
+pkgver=1.7.1
+pkgrel=1
+pkgdesc='Python3 wrapper around libdecsync for synchronizing using DecSync'
+arch=('any')
+url='https://github.com/39aldo39/libdecsync-bindings-python3'
+license=('GPL2')
+depends=()
+makedepends=('python-setuptools')
+source=("${_pkgname}-${pkgver}.tar.gz::https://github.com/39aldo39/$_pkgname/archive/v$pkgver.tar.gz")
+sha512sums=('7e67711db4a447d9a31b0825269462ad3191dbfd1ee3f0f2e76f80e3750472bde0ad291b1ef3ff3bc6671b0389bec51bf3c17c76b5b6e5d9672d381624087568')
+
+build() {
+  cd "$srcdir"/${_pkgname}-${pkgver}
+  python setup.py build
+}
+ 
+package() {
+  cd "$srcdir/$_pkgname-$pkgver"
+  python setup.py install --root="$pkgdir/" --optimize=1
+  install -Dm644 LICENSE.txt "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+}
+
+# vim:set ts=2 sw=2 et:
