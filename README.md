@@ -37,3 +37,7 @@ Some of them are on AUR, some are not (or no longer).
 * flipper
   * wrote by myself
 
+* feedreader-decsync-git
+  * wrote by myself
+  * dependencies adpated from the [feedreader](https://aur.archlinux.org/packages/feedreader) AUR package
+
